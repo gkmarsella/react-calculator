@@ -1,0 +1,80 @@
+.Display {
+	background-color: #4c4c4c;
+	height: 50px;
+	display: block;
+	width: 96.5%;
+	font-style: bold;
+	color: white;
+	text-align: end;
+	line-height: 79px;
+	border-radius: 4px 4px 0 0;
+	-webkit-user-select: none;
+}
+
+.Calculator {
+	height: 260px;
+	width: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin: 50px auto;
+	-webkit-user-select: none;
+}
+
+
+.Button {
+	cursor: pointer;
+	width: 48px;
+	height: 50px;
+	background-color: #797979eb;
+	border: 0.01em solid black;
+	line-height: 47px;
+}
+
+.Button:active {
+	background-color: #a2a2a2eb;
+}
+
+.FirstRowOperators {
+	cursor: pointer;
+	width: 48px;
+	height: 50px;
+	background-color: #5f5f5f;
+	border: 0.01em solid black;
+	line-height: 47px;
+}
+
+.FirstRowOperators:active {
+	background-color: #797979eb;
+}
+
+
+.OperatorButton {
+	cursor: pointer;
+	width: 48px;
+	height: 50px;
+	background-color: #ffa42f;
+	border: 0.01em solid black;
+	line-height: 47px;
+}
+
+.OperatorButton:active {
+	background-color: #bf7516;
+}
+
+.ZeroButton {
+	cursor: pointer;
+	width: 96.5px;
+	height: 50px;
+	background-color: #797979eb;
+	border: 0.01em solid black;
+	line-height: 47px;
+}
+
+.ZeroButton:active {
+	cursor: pointer;
+	width: 96.5px;
+	height: 50px;
+	background-color: green;
+	border: 0.01em solid black;
+}
