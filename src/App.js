@@ -44,7 +44,7 @@ class App extends Component {
       this.setState({
         currentInput: totalInput.toString().split(''),
         prevInput: null,
-        operator:  null
+        operator:  e
       })
 
     } else {
@@ -81,14 +81,34 @@ class App extends Component {
     })
   }
 
+  percentButton = () => {
+    if(this.state.currentInput.length > 0){
+      const screenNumbers = +(this.state.currentInput.join(''));
+      const toPercent = screenNumbers/100;
+      this.setState({
+        currentInput: [toPercent]
+      })
+    }
+  }
+
+  plusMinusButton = () => {
+    if(this.state.currentInput.length > 0){
+      const currNum = +(this.state.currentInput.join(''));
+      const reversedSign = currNum * -1;
+      this.setState({
+        currentInput: [reversedSign]
+      })
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <div className={classes.Calculator}>
           <div className={classes.Display}>{this.state.currentInput}</div>
           <div className={classes.FirstRowOperators} onClick={() => this.clearButton('C')}>C</div>
-          <div className={classes.FirstRowOperators} onClick={() => this.clearButton('±')}>±</div>
-          <div className={classes.FirstRowOperators} onClick={() => this.clearButton('%')}>%</div>
+          <div className={classes.FirstRowOperators} onClick={() => this.plusMinusButton('±')}>±</div>
+          <div className={classes.FirstRowOperators} onClick={() => this.percentButton('%')}>%</div>
           <div className={classes.OperatorButton} onClick={() => this.operatorInput('/')}>÷</div>
           <div className={classes.Button} onClick={() => this.numberInput(7)}>7</div>
           <div className={classes.Button} onClick={() => this.numberInput(8)}>8</div>
